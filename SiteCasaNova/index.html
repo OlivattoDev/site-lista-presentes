@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Casa Nova 💛</title>
+    <style>
+        body {
+          font-family: "Segoe UI", Arial, sans-serif;
+          text-align: center;
+          background: #fff9f4;
+          color: #333;
+          padding: 2rem;
+        }
+        .container {
+          background: #ffffff;
+          padding: 2rem;
+          border-radius: 16px;
+          max-width: 420px;
+          margin: auto;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+          color: #e0a800;
+          margin-bottom: 0.5rem;
+        }
+        p {
+          font-size: 1.1rem;
+          line-height: 1.5;
+        }
+        .pix {
+          background: #f2f2f2;
+          border-radius: 8px;
+          padding: 0.8rem;
+          font-weight: bold;
+          font-size: 1.1rem;
+          margin: 1.5rem 0;
+          color: #222;
+        }
+        button {
+          background: #e0a800;
+          color: white;
+          border: none;
+          padding: 0.8rem 1.4rem;
+          border-radius: 10px;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: 0.2s;
+        }
+        button:hover {
+          background: #d39e00;
+        }
+        .msg {
+          margin-top: 1rem;
+          color: #28a745;
+          font-weight: bold;
+        }
+        footer {
+          margin-top: 2rem;
+          font-size: 0.9rem;
+          color: #777;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>💛 Nossa Casa Nova</h1>
+    <p>Obrigado por querer participar desse momento tão especial com a gente!</p>
+    <p>Se quiser nos presentear, é só fazer um Pix direto pra:</p>
+
+    <div class="pix" id="pix">matheusinho@gmail.com</div>
+
+    <button onclick="copiarPix()">📋 Copiar chave Pix</button>
+    <div id="mensagem" class="msg"></div>
+
+    <p style="margin-top:1.5rem;">Seu carinho já é o melhor presente 💕</p>
+</div>
+
+<footer>Feito com amor por Matheus &amp; Ingrid </footer>
+
+<script>
+    function copiarPix() {
+      const chave = document.getElementById("pix").innerText;
+      navigator.clipboard.writeText(chave);
+      const msg = document.getElementById("mensagem");
+      msg.textContent = "✅ Chave Pix copiada com sucesso!";
+      setTimeout(() => msg.textContent = "", 3000);
+    }
+</script>
+</body>
+</html>
